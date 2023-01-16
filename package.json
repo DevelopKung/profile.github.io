@@ -7,7 +7,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "gitdir": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "deploy": "npm run generate && git add . && git commit -m 'init' && npm run gitdir"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
@@ -15,12 +16,12 @@
     "@nuxtjs/moment": "^1.6.1",
     "dotenv": "^10.0.0",
     "nuxt": "^2.15.8",
-    "push-dir": "^0.4.1",
     "vue": "^2.6.14",
     "vuetify": "^2.6.1",
     "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "@nuxtjs/vuetify": "^1.12.3"
+    "@nuxtjs/vuetify": "^1.12.3",
+    "push-dir": "^0.4.1"
   }
 }
