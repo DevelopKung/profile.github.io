@@ -2,7 +2,6 @@ import colors from 'vuetify/es5/util/colors'
 const env = require('dotenv').config()
 
 export default {
-  target: 'static',
   publicRuntimeConfig:{
     myApp:{
       version: "1.0.0"
