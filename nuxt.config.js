@@ -1,12 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 const env = require('dotenv').config()
-const routerBsse = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/profile.github.io/'
-  }
-}: {}
 
 export default {
+  target: 'static',
+  router: {
+    base: '/profile.github.io/'
+  },
   publicRuntimeConfig:{
     myApp:{
       version: "1.0.0"
@@ -99,8 +98,6 @@ export default {
       }
     }
   },
-
-  ...routerBsse ,
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
