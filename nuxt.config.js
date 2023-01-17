@@ -1,6 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
 const env = require('dotenv').config()
-const github = 'https://DevelopKung.github.io/profile.github.io'
 
 export default {
   target: 'static',
