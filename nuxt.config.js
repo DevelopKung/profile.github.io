@@ -34,6 +34,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    {src: '~plugins/vuetify.js',    mode: 'client' } ,
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
