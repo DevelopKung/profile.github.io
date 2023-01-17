@@ -2,9 +2,9 @@
   <div>
     <v-container>
       <v-card class="pa-4">
-        My ProFile
+        My About
       </v-card>
-      <v-btn @click="$router.push('/about')">about</v-btn>
+      <v-btn @click="$router.push('/')">index</v-btn>
     </v-container>
   </div>
 </template>
