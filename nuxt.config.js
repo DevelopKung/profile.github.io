@@ -1,5 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 const env = require('dotenv').config()
+const github = 'https://DevelopKung.github.io/profile.github.io'
 
 export default {
   target: 'static',
@@ -43,7 +44,9 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  router: {} ,
+  router: {
+    base: process.env.NODE_ENV !== 'development'?'/profile.github.io/':'/'
+  } ,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
