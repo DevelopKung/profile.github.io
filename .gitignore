@@ -90,3 +90,5 @@ sw.*
 *.swp
 ecosystem.config.js
 .DS_Store
+
+dist
