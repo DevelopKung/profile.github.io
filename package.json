@@ -7,9 +7,9 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "pushDir": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "pushDir": "nuxt generate && git add . && git commit -m 'deploy' && push-dir --dir=dist --branch=gh-pages --cleanup",
     "pushMaster": "git add . && git commit -m 'deploy' && git branch -M master && git push -u origin master",
-    "deploy": "nuxt generate && git add . && git commit -m 'deploy' && npm run pushMaster"
+    "deploy": "npm run pushMaster"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
