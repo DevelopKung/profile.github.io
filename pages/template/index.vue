@@ -10,7 +10,7 @@
       </div>
 
       <div id="skill" ref="skill">
-        <Skill />
+        <Skill :data="lists" />
       </div>
     </NavBar>
   </div>

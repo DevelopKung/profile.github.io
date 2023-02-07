@@ -2,9 +2,18 @@
 <div class="page-index">
   <v-container>
     <v-card class=" pa-2" outlined>
-      <div class="box" @click="$router.push('./template#home')">
-        <b>PROFILE</b>
-      </div>
+      <v-row>
+        <v-col cols="12" sm="12" md="6">
+          <div class="box ma-1" @click="$router.push('./template#home')">
+            <b>PROFILE</b>
+          </div>
+        </v-col>
+        <v-col cols="12" sm="12" md="6">
+          <div class="box ma-1" @click="$router.push('./template#home')">
+            <b>RESUME</b>
+          </div>
+        </v-col>
+      </v-row>
     </v-card>
   </v-container>
 </div>
@@ -42,12 +51,13 @@ export default {
     justify-content: center;
     align-items: center;
     border-radius: 40px !important;
-    width: 200px;
+    width: 100%;
     height: 100px;
     cursor: pointer;
     border: 1px solid #eee;
-    background: #BA68C8;
+    background: url("https://t4.ftcdn.net/jpg/02/83/13/61/360_F_283136113_b3VRHNiOPFMOluzYJPpfuoH8Czh9c743.jpg");
     color: #fff;
   }
 }
+
 </style>
