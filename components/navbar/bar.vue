@@ -94,7 +94,7 @@ export default {
 
 <style lang="scss" scoped>
 .bar {
-  // z-index: 10000;
+  z-index: 10000;
   position: fixed;
   top: 0;
   width: 100%;
