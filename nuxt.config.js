@@ -27,14 +27,20 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600&display=swap' },
+      { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css' },
+    ],
+    script:[
+      { src:'https://cdn.jsdelivr.net/npm/typed.js@2.0.12' },
     ]
   },
   ssr: false,
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    // '~/assets/css/style.css',
     {src: '~plugins/vuetify.js',    mode: 'client' } ,
+    // {src: '~plugins/typed.js',    mode: 'client' } ,
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -56,6 +62,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/axios',
     '@nuxtjs/dotenv'
   ],
 
@@ -113,6 +120,6 @@ export default {
   },
 
   server: {
-    port: process.env.PORT || 3000
+    port: process.env.PORT || 4000
   }
 }
