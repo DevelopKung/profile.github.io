@@ -10,7 +10,7 @@
     "gitCommit": "git add . && git commit -m 'deploy'",
     "pushDir": "nuxt generate && npm run gitCommit && push-dir --dir=dist --branch=gh-pages --cleanup",
     "pushMaster": "npm run gitCommit && git branch -M master && git push -u origin master",
-    "deploy": "npm run pushMaster"
+    "deploy": "npm run pushDir"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
