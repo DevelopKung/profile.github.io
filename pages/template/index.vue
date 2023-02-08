@@ -18,31 +18,23 @@
 
   
 <script>
-import { mapActions, mapGetters } from 'vuex'
 import NavBar from "../../components/navbar/bar";
 import Home from "./home";
 import About from "./about";
 import Skill from "./skill";
+import data from './../../static/data.json'
 export default {
   components: { NavBar, Home, About, Skill, },
+  data() {
+    return {
+      lists: data
+    }
+  },
   methods: {
     path(item) {
       var element = this.$refs[item.ref];
       element.scrollIntoView();
     },
-  },
-  computed: {
-    ...mapGetters({
-      lists: 'template/lists'
-    }),
-  },
-  methods: {
-    ...mapActions({
-      loadData: 'template/loadData'
-    }),
-  },
-  async created() {
-    await this.loadData()
   },
 };
 </script>

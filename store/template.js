@@ -16,6 +16,8 @@ export const actions = {
   async loadData({ state , commit }) {
     let url = '/data.json'
     const res = await this.$axios.$get(url);
+    console.log(res);
+    // console.log(JSON.parse(res));
     commit('setLists',res)
   },  
 }
