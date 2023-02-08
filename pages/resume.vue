@@ -1,6 +1,6 @@
 <template>
-<div v-if="data" class="page-about pa-4">
-  <v-row>
+<div>
+  <v-row class="pa-4">
     <v-col class="pa-2 p-sm-0" cols="12" sm="12" md="4">
       <v-card class="block-profile" outlined>
         <div>
@@ -67,45 +67,11 @@
 </template>
 
 <script>
+import data from '../static/data.json'
+
 export default {
-  props: {
-    data: {
-      type: Object,
-      default: {}
-    }
-  }
+  data: () => ({
+    data: data
+  })
 };
 </script>
-
-<style lang="scss" scoped>
-.page-about {
-  min-height: 100vh;
-
-  .block-profile {
-    .pf-img {
-      background: url("~/assets/img/hero-bg.jpg") center no-repeat;
-      background-size: cover;
-      height: 240px;
-      position: relative;
-
-      .img {
-        position: absolute;
-        bottom: -60px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        border-radius: 50%;
-        padding: 20px;
-        border: 2px solid #eee;
-      }
-    }
-
-    .pf-data {
-      width: 100%;
-      margin-top: 70px;
-      text-align: center;
-    }
-  }
-}
-</style>

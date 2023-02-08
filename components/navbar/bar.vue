@@ -1,36 +1,11 @@
 <template>
 <div>
-  <div v-if="false" class="bar text-right pa-4">
-    <div class="d-inline d-sm-none">
-      <v-icon class="icon" @click="drawer = true" large :color="!drawer ? 'primary':''" v-text="!drawer ? 'fas fa-bars':'fas fa-times'"></v-icon>
-      <v-navigation-drawer class="d-inline d-sm-none" v-model="drawer" absolute temporary>
-        <v-list-item-group v-model="selectedItem" color="primary">
-          <v-list-item>
-            <v-list-item-avatar>
-              <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
-            </v-list-item-avatar>
-            <v-list-item-title>John Leider</v-list-item-title>
-          </v-list-item>
-          <v-divider></v-divider>
-
-          <v-list dense>
-            <v-list-item v-for="item in items" :key="item.title" link @click="goto(item.link)">
-              <v-list-item-icon>
-                <v-icon>{{ item.icon }}</v-icon>
-              </v-list-item-icon>
-
-              <v-list-item-title>{{ item.title }} </v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-list-item-group>
-      </v-navigation-drawer>
-    </div>
-  </div>
-
   <div class="bar text-right pa-4">
-    <v-icon class="icon" @click="drawer =! drawer" large :color="!drawer ? 'primary':''" v-text="!drawer ? 'fas fa-bars':'fas fa-times'"></v-icon>
+    <v-btn class="icon" fab dark small :color="!drawer ? '#4A148C':''" @click="drawer =! drawer">
+      <v-icon dark v-text="!drawer ? 'fas fa-bars':'fas fa-times'"></v-icon>
+    </v-btn>
 
-    <div class="bar-full-screen text-left d-none d-sm-inline" :class="!drawer?'slide-top':''">
+    <div class="bar-full-screen text-left d-none d-sm-block" :class="!drawer?'slide-top':''">
       <div v-for="(item,index) in items" :key="index" class="mb-2">
         <div class="mb-2 bar-icon d-flex" @click="goto(item.link)">
           <v-icon class="icon" left dark> {{item.icon}} </v-icon>
@@ -47,6 +22,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
   <slot></slot>
@@ -61,20 +37,17 @@ export default {
     items: [{
         title: 'Home',
         icon: 'mdi-home',
-        link: '/template#home',
-        ref: 'home'
+        link: '/'
       },
       {
-        title: 'About',
+        title: 'Resume',
         icon: 'mdi-forum',
-        link: '/template#about',
-        ref: 'about'
+        link: '/resume'
       },
       {
-        title: 'Skill',
-        icon: 'mdi-account-star',
-        link: '/template#skill',
-        ref: 'skill'
+        title: 'Experience',
+        icon: 'mdi-forum',
+        link: null
       },
       {
         title: 'Back',
@@ -85,8 +58,8 @@ export default {
   }),
   methods: {
     goto(path) {
-      // this.$emit('path', path)
       if (path) this.$router.push(path);
+      this.drawer = false
     }
   },
 }
@@ -97,8 +70,7 @@ export default {
   z-index: 10000;
   position: fixed;
   top: 0;
-  width: 100%;
-  height: 100vh;
+  right: 0;
 
   .icon {
     transition: all .2s ease-out;
@@ -125,12 +97,12 @@ export default {
     overflow: hidden;
     transition: .2s ease;
     padding: 18px 20px;
-    background: #9C27B0;
+    background: #4A148C;
     border-radius: 30px;
 
     &:hover {
       cursor: pointer;
-      width: 150px;
+      width: 170px;
       padding: 14px 20px;
 
       .title {
@@ -165,18 +137,18 @@ export default {
     overflow: hidden;
     transition: .2s ease;
     padding: 18px 20px;
-    background: #9C27B0;
+    background: #4A148C;
     border-radius: 30px;
 
-    &:hover {
-      cursor: pointer;
-      width: 150px;
-      padding: 14px 20px;
+    // &:hover {
+    //   cursor: pointer;
+    //   width: 170px;
+    //   padding: 14px 20px;
 
-      .title {
-        display: inline;
-      }
-    }
+    //   .title {
+    //     display: inline;
+    //   }
+    // }
 
     .title {
       display: none;

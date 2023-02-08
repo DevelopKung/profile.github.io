@@ -1,63 +1,29 @@
 <template>
-<div class="page-index">
-  <v-container>
-    <v-card class=" pa-2" outlined>
-      <v-row>
-        <v-col cols="12" sm="12" md="6">
-          <div class="box ma-1" @click="$router.push('./template#home')">
-            <b>PROFILE</b>
-          </div>
-        </v-col>
-        <v-col cols="12" sm="12" md="6">
-          <div class="box ma-1" @click="$router.push('./template#home')">
-            <b>RESUME</b>
-          </div>
-        </v-col>
-      </v-row>
-    </v-card>
-  </v-container>
+<div>
+  <div class="home-page">
+    <h1 class="name">Atiwat Suttisak</h1>
+    <h2 class="typed mb-2" ref="typed"></h2>
+    <div class="social-links">
+      <v-icon class="mr-2 icon" large color="primary">fab fa-facebook</v-icon>
+      <v-icon class="mr-2 icon" large color="error">fab fa-instagram</v-icon>
+      <v-icon class="mr-2 icon" large color="success">fab fa-line</v-icon>
+    </div>
+  </div>
 </div>
 </template>
 
 <script>
+import Typed from 'typed.js'
 export default {
-
-}
+  mounted() {
+    const typed = this.$refs.typed;
+    new Typed(typed, {
+      strings: ['Full Stack Developer', 'Frontend', 'Backend'],
+      typeSpeed: 100,
+      delaySpeed: 90,
+      loop: true,
+      showCursor: false
+    });
+  }
+};
 </script>
-
-<style lang="scss" scoped>
-.page-index {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: url("~/assets/img/hero-bg.jpg") top no-repeat;
-  background-size: cover;
-  position: relative;
-
-  &:before {
-    content: "";
-    background: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px !important;
-    width: 100%;
-    height: 100px;
-    cursor: pointer;
-    border: 1px solid #eee;
-    background: url("https://t4.ftcdn.net/jpg/02/83/13/61/360_F_283136113_b3VRHNiOPFMOluzYJPpfuoH8Czh9c743.jpg");
-    color: #fff;
-  }
-}
-
-</style>

@@ -4,7 +4,7 @@ const env = require('dotenv').config()
 export default {
   target: 'static',
   router: {
-    base: '/profile.github.io/'
+    base: env.parsed.GITPAGES_NAME
   },
   publicRuntimeConfig:{
     myApp:{
@@ -38,9 +38,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // '~/assets/css/style.css',
     {src: '~plugins/vuetify.js',    mode: 'client' } ,
-    // {src: '~plugins/typed.js',    mode: 'client' } ,
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -51,7 +49,7 @@ export default {
   components: true,
 
   router: {
-    base: process.env.NODE_ENV !== 'development'?'/profile.github.io/':'/'
+    base: process.env.NODE_ENV !== 'development'?env.parsed.GITPAGES_NAME:'/'
   } ,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
