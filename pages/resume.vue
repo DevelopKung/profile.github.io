@@ -22,7 +22,6 @@
       </v-card>
 
       <v-card class="block-slill mt-2" outlined>
-        <v-card-title>SKILL</v-card-title>
         <v-card-text>
           <v-row>
             <v-col cols="auto" v-for="(item,index) in data.items" :key="index">
@@ -35,6 +34,7 @@
         </v-card-text>
       </v-card>
     </v-col>
+    
     <v-col class="pa-2 p-sm-0" cols="12" sm="12" md="8">
       <v-card class="block-slill" outlined>
         <v-card-title>SKILL</v-card-title>

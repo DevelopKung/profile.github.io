@@ -27,18 +27,6 @@
   ],
   "items": [
     {
-      "img": "https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU",
-      "text": "GITHUB"
-    },
-    {
-      "img": "https://gitlab.com/uploads/-/system/project/avatar/278964/project_avatar.png",
-      "text": "GITLAB"
-    },
-    {
-      "img": "https://www.mindphp.com/images/knowledge/IT/768px-Visual_Studio_Code_1.18_icon.svg.png",
-      "text": "VS CODE"
-    },
-    {
       "img": "https://d1.awsstatic.com/acs/characters/Logos/Docker-Logo_Horizontel_279x131.b8a5c41e56b77706656d61080f6a0217a3ba356d.png",
       "text": "DOCKER"
     },
@@ -49,6 +37,18 @@
     {
       "img": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
       "text": "MY SQL"
+    },
+    {
+      "img": "https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU",
+      "text": "GITHUB"
+    },
+    {
+      "img": "https://gitlab.com/uploads/-/system/project/avatar/278964/project_avatar.png",
+      "text": "GITLAB"
+    },
+    {
+      "img": "https://www.mindphp.com/images/knowledge/IT/768px-Visual_Studio_Code_1.18_icon.svg.png",
+      "text": "VS CODE"
     }
   ],
   "skill": [
