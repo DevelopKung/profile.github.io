@@ -40,7 +40,7 @@ export default {
   min-height: 100vh;
   padding: 0 10rem;
   .bg-left {
-    z-index: 1000;
+    z-index: 5;
     width: 100%;
     min-height: 120vh;
     background: url("~/assets/img/hero-bg.jpg") top no-repeat;

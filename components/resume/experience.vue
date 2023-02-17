@@ -4,11 +4,26 @@
     <v-card elevation="0">
       <div class="d-flex justify-space-between align-center">
         <v-card-title class="py-2">Experience</v-card-title>
-        <a href="resume.png" download>
-          <v-btn color="primary" text >
-            <v-icon size="14" left>fa fa-upload</v-icon> print
+        <div>
+          <a href="resume.png" download>
+            <v-btn color="primary" outlined small >
+              <v-icon size="14" left>fa fa-upload</v-icon> print
+            </v-btn>
+          </a>
+          <v-dialog v-model="openModalExample" width="600">
+            <template v-slot:activator="{ on, attrs }">
+              <v-btn color="#4a148c" outlined small v-bind="attrs" v-on="on">
+                <v-icon size="14" left>fa fa-file-image</v-icon> example
+              </v-btn>
+            </template>
+            <v-card outlined>
+              <v-img src="resume.png"></v-img>
+            </v-card>
+          </v-dialog>
+          <v-btn color="#4a148c" outlined small @click="$router.go(-1)">
+            <v-icon size="14" left>fa fa-angle-left</v-icon> back
           </v-btn>
-        </a>
+        </div>
       </div>
       <v-card-text class="py-0" v-for="(item,index) in data.experience" :key="index">
         <v-card-title class="py-2">{{ item.company }}</v-card-title>
@@ -29,7 +44,12 @@ export default {
   components: { Box },
   props: {
     data: { type: Object, default: () => {} }
-  }
+  },
+  data() {
+    return {
+      openModalExample: false
+    }
+  },
 }
 </script>
 
