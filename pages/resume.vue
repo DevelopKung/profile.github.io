@@ -1,77 +1,83 @@
 <template>
-<div>
-  <v-row class="pa-4">
-    <v-col class="pa-2 p-sm-0" cols="12" sm="12" md="4">
-      <v-card class="block-profile" outlined>
-        <div>
-          <div class="pf-img">
-            <v-img class="img" width="120" :src="require('~/assets/img/me.jpg')" aspect-ratio="1"></v-img>
-          </div>
+<div class="page-print">
+  <v-card outlined>
+    <v-row no-gutters>
+      <v-col class="bg-left" cols="12" sm="4">
+        <div class="infor">
+          <Avatar />
+          <Info :data="data" />
         </div>
-        <div class="pf-data text-center">
-          <h3>{{ data.full_name }}</h3>
-          <v-card-subtitle class="pb-4 pt-0">{{ data.position }}</v-card-subtitle>
+      </v-col>
 
-          <div v-for="(item,index) in data.contact" :key="index" class="pb-4 px-6 text-left d-flex">
-            <v-icon color="primary" class="mr-4" v-text="item.icon"></v-icon>
-            <div class="d-flex">
-              <div><b>{{ item.title }}</b> <small>{{ item.value }}</small> </div>
-            </div>
-          </div>
+      <v-col class="bg-right" cols="12" sm="8">
+        <div class="infor-right">
+          <Experience :data="data" />
+          <Skill-Expertize :data="data" />
         </div>
-      </v-card>
-
-      <v-card class="block-slill mt-2" outlined>
-        <v-card-text>
-          <v-row>
-            <v-col cols="auto" v-for="(item,index) in data.items" :key="index">
-              <div class="pa-2 text-center">
-                <img height="40" :src="item.img">
-                <div>{{ item.text }}</div>
-              </div>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
-    </v-col>
-    
-    <v-col class="pa-2 p-sm-0" cols="12" sm="12" md="8">
-      <v-card class="block-slill" outlined>
-        <v-card-title>SKILL</v-card-title>
-        <v-card-text>
-          <v-row>
-            <v-col cols="12" sm="6" v-for="(item,index) in data.skill" :key="index">
-              <div class="pa-2">
-                <img width="20" :src="item.img">
-                <b class="ml-4"> {{ item.text }} </b>
-                <v-progress-linear rounded :color="item.color" height="10" :value="item.power" striped></v-progress-linear>
-              </div>
-            </v-col>
-          </v-row>
-        </v-card-text>
-      </v-card>
-
-      <v-card class="block-experience mt-2" outlined>
-        <v-card-title>Experience</v-card-title>
-        <v-card-text v-for="(item,index) in data.experience" :key="index">
-          <v-card-title>{{ item.company }}</v-card-title>
-          <v-card-subtitle>{{ item.date }}</v-card-subtitle>
-          <div class="ml-4" v-for="(row,index) in item.detail" :key="index">
-            <small>{{ row }}</small>
-          </div>
-        </v-card-text>
-      </v-card>
-    </v-col>
-  </v-row>
+      </v-col>
+    </v-row>
+  </v-card>
 </div>
 </template>
 
 <script>
+import Avatar from '../components/resume/avatar.vue';
+import Experience from '../components/resume/experience.vue';
+import Info from '../components/resume/info.vue';
+import SkillExpertize from '../components/resume/skill-expertize.vue';
 import data from '../static/data.json'
-
 export default {
+  components: { Avatar, Info, SkillExpertize, Experience },
+  layout: "blank",
   data: () => ({
     data: data
-  })
+  }),
 };
 </script>
+
+<style lang="scss" scoped>
+.page-print {
+  min-height: 100vh;
+  padding: 0 10rem;
+  .bg-left {
+    z-index: 1000;
+    width: 100%;
+    min-height: 120vh;
+    background: url("~/assets/img/hero-bg.jpg") top no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &:before {
+      content: "";
+      background: rgba(255, 255, 255, 0.856);
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .infor {
+      position: absolute;
+      left: 0;
+      right: 0;
+      text-align: center;
+      padding: 10px 10px !important;
+      height: 100% !important;
+    }
+  }
+
+  .bg-right {
+    .infor-right {
+      padding: 0 1rem 0 1rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 960px) {
+  .page-print {
+    padding: 0 0 !important;
+  }
+}
+</style>

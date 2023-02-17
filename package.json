@@ -8,9 +8,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "gitCommit": "git add . && git commit -m 'deploy'",
-    "pushWeb": "nuxt generate && npm run gitCommit && push-dir --dir=dist --branch=gh-pages --cleanup",
-    "pushGit": "npm run gitCommit && git branch -M master && git push -u origin master",
-    "deploy": "npm run pushGit"
+    "pushPages": "nuxt generate && npm run gitCommit && push-dir --dir=dist --branch=gh-pages --cleanup",
+    "pushGit": "npm run gitCommit && git branch -M master && git push -u origin master"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
