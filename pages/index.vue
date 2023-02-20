@@ -32,7 +32,7 @@ export default {
     });
   },
   async created(){
-    let res = await this.$axios.$get('https://jsonplaceholder.typicode.com/todos/1')
+    let res = await this.$axios.$get('/data.json')
     this.lists = res
   }
 };
