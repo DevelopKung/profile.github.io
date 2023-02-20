@@ -8,6 +8,7 @@
       <v-icon class="mr-2 icon" large color="error">fab fa-instagram</v-icon>
       <v-icon class="mr-2 icon" large color="success">fab fa-line</v-icon>
     </div>
+    {{ lists }}
   </div>
 </div>
 </template>
@@ -15,6 +16,11 @@
 <script>
 import Typed from 'typed.js'
 export default {
+  data() {
+    return {
+      lists: []
+    }
+  },
   mounted() {
     const typed = this.$refs.typed;
     new Typed(typed, {
@@ -24,6 +30,10 @@ export default {
       loop: true,
       showCursor: false
     });
+  },
+  async created(){
+    let res = await this.$axios.$get('/data.json')
+    this.lists = res
   }
 };
 </script>
