@@ -25,11 +25,9 @@
       selectedItem: 1,
       drawer: false,
       items: [
-        { title: 'Home', icon: 'mdi-home', link: '/', type: "path" },
-        { title: 'About', icon: 'mdi-account-star', link: '/about', type: "path" },
-        // { title: 'Experience', icon: 'mdi-forum', link: '/experience', type: "path" },
-        { title: 'Resume', icon: 'mdi-account-star', link: '/resume', type: "path" },
-        // { title: 'Print', icon: 'mdi-printer', link: '/print', type: "event" },
+        { title: 'Home', icon: 'fas fa-home', link: '/', type: "path" },
+        { title: 'About', icon: 'fas fa-user-tie', link: '/about', type: "path" },
+        { title: 'Resume', icon: 'far fa-address-card', link: '/resume', type: "path" },
       ],
     }),
     methods: {
