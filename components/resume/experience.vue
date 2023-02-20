@@ -27,7 +27,7 @@
                 <div class="pa-1">
                   <a href="resume.png" download>
                     <v-btn color="#4a148c" text small >
-                      <v-icon size="14" left>fa fa-upload</v-icon> print
+                      <v-icon size="14" left>fa fa-download</v-icon> print
                     </v-btn>
                   </a>
                 </div>

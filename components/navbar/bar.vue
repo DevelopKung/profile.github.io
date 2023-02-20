@@ -7,8 +7,8 @@
   
       <div class="bar-full-screen text-left" :class="!drawer?'slide-top':''">
         <div v-for="(item,index) in items" :key="index" class="mb-2">
-          <div class="mb-2 bar-icon d-flex" @click="goto(item.link)">
-            <v-icon class="icon" left dark> {{item.icon}} </v-icon>
+          <div class="mb-2 bar-icon d-flex" @click="goto(item.router)">
+            <v-icon class="icon" left dark > {{item.icon}} </v-icon>
             <span class="title">{{item.title}}</span>
           </div>
         </div>
@@ -25,9 +25,9 @@
       selectedItem: 1,
       drawer: false,
       items: [
-        { title: 'Home', icon: 'fas fa-home', link: '/', type: "path" },
-        { title: 'About', icon: 'fas fa-user-tie', link: '/about', type: "path" },
-        { title: 'Resume', icon: 'far fa-address-card', link: '/resume', type: "path" },
+        { title: 'Home', icon: 'mdi-home', router: '/', type: "mdi" },
+        { title: 'About', icon: 'mdi-account', router: '/about', type: "mdi" },
+        { title: 'Resume', icon: 'far fa-address-card', router: '/resume', type: "far" },
       ],
     }),
     methods: {
