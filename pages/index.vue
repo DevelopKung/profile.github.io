@@ -8,7 +8,6 @@
       <v-icon class="mr-2 icon" large color="error">fab fa-instagram</v-icon>
       <v-icon class="mr-2 icon" large color="success">fab fa-line</v-icon>
     </div>
-    {{ lists }} {{ 1 }}
   </div>
 </div>
 </template>
