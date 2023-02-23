@@ -17,7 +17,7 @@ import Typed from 'typed.js'
 export default {
   data() {
     return {
-      lists: []
+      lists: [],
     }
   },
   mounted() {
