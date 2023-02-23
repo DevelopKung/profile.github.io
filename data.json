@@ -1,0 +1,154 @@
+{
+  "full_name": "ATIWAT SUTTSAK",
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQS9QE32spMNwUUnA4RfpJqTLoNLIKC0NgXaw&usqp=CAU",
+  "nickname": "TuMKunG Developer",
+  "position": "Full Stack Developer",
+  "contact": [
+    {
+      "title": "Full Name",
+      "value": "TuMKunG Developer",
+      "icon": "mdi-account"
+    },
+    {
+      "title": "Email",
+      "value": "atiwat.sut@outlook.co.th",
+      "icon": "mdi-email"
+    },
+    {
+      "title": "Phone",
+      "value": "062-xxx-xxxx",
+      "icon": "mdi-cellphone"
+    },
+    {
+      "title": "Address",
+      "value": "จ.ขอนแก่น 40000",
+      "icon": "mdi-home"
+    }
+  ],
+  "items": [
+    {
+      "img": "https://d1.awsstatic.com/acs/characters/Logos/Docker-Logo_Horizontel_279x131.b8a5c41e56b77706656d61080f6a0217a3ba356d.png",
+      "text": "DOCKER"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/62/MySQL.svg/1200px-MySQL.svg.png",
+      "text": "MY SQL"
+    },
+    {
+      "img": "https://play-lh.googleusercontent.com/PCpXdqvUWfCW1mXhH1Y_98yBpgsWxuTSTofy3NGMo9yBTATDyzVkqU580bfSln50bFU",
+      "text": "GITHUB"
+    },
+    {
+      "img": "https://gitlab.com/uploads/-/system/project/avatar/278964/project_avatar.png",
+      "text": "GITLAB"
+    },
+    {
+      "img": "https://www.mindphp.com/images/knowledge/IT/768px-Visual_Studio_Code_1.18_icon.svg.png",
+      "text": "VS CODE"
+    },
+    {
+      "img": "https://webassets.mongodb.com/_com_assets/cms/mongodb_logo1-76twgcu2dm.png",
+      "text": "MONGO DB"
+    }
+    
+  ],
+  "skill": [
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpngGRjYX1ca7qAADU3K6eGLj7ShQE3L2otdzfryl_Y9Ht2QRoQKYQbsXd36XIxMbYOw0&usqp=CAU",
+      "text": "HTML",
+      "power": "80",
+      "color": "#f16528"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png",
+      "text": "CSS",
+      "power": "80",
+      "color": "#264de4"
+    },
+    {
+      "img": "data:image/png;base64,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",
+      "text": "JAVASCRIPT",
+      "power": "80",
+      "color": "#f7df1e"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/6128107?s=280&v=4",
+      "text": "Vue.js",
+      "power": "70",
+      "color": "#41b883"
+    },
+    {
+      "img": "https://www.datocms-assets.com/205/1667561117-nuxt.svg?auto=format&fit=max&w=1200",
+      "text": "Nuxt.js",
+      "power": "90",
+      "color": "#00dd82"
+    },
+    {
+      "img": "https://avatars.githubusercontent.com/u/22138497?s=200&v=4",
+      "text": "Vuetify",
+      "power": "80",
+      "color": "#1867c0"
+    },
+    {
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+      "text": "React",
+      "power": "70",
+      "color": "#61dbfb"
+    },
+    {
+      "img": "https://miro.medium.com/max/1200/1*15CYVZdpsxir8KLdxEZytg.png",
+      "text": "Angular JS",
+      "power": "70",
+      "color": "#b82934"
+    },
+    {
+      "img": "https://cdn.pixabay.com/photo/2015/04/23/17/41/node-js-736399_1280.png",
+      "text": "Node JS",
+      "power": "80",
+      "color": "#83cd29"
+    },
+    {
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVvjwXVYF4tN-OI_7TVCfIuIzLIYaHyDkvzznnH85ImHP9-6nYMPQjZcRhtFXe5dN7AHc&usqp=CAU",
+      "text": "Sequelize",
+      "power": "80",
+      "color": "#3c76c3"
+    },
+    {
+      "img": "https://www.freecodecamp.org/news/content/images/2022/04/sass-image.png",
+      "text": "SASS&SCSS",
+      "power": "70",
+      "color": "#cd6799"
+    }
+  ],
+  "experience": [
+    {
+      "date": "พฤศจิกายน 2563 - 2564",
+      "detail": [
+        "Admin คอย Support ระบบต่างๆ",
+        "Frontend คอยทำ UI ตาม Design ต่างๆ และ ทำ RESTFUL API โดยใช้ Axios"
+      ],
+      "company": "Tree Solution",
+      "position": "Programer"
+    },
+    {
+      "date": "กุมภาพันธ์ 2564 - กุมภาพันธ์ 2565",
+      "detail": [
+        "Admin คอย Support ระบบต่างๆ",
+        "Frontend คอยทำ UI ตาม Design ต่างๆ และ ทำ RESTFUL API โดยใช้ Axios"
+      ],
+      "company": "Kasco IT",
+      "position": "Frontend"
+    },
+    {
+      "date": "กุมภาพันธ์ 2565 - ปัจจุบัน",
+      "detail": [
+        "Admin คอย Support ระบบต่างๆ",
+        "Frontend คอยทำ UI ตาม Design ต่างๆ และ ทำ RESTFUL API โดยใช้ Axios",
+        "Backend ใช้ node ในการทำ Server โดยใช้ Sequelize ร่วมกับ Database Mysql, Mongo DB",
+        "คิดวิเคราะห์ ออกแบบ Database และ ทำตาม Requirement ต่างๆ"
+      ],
+      "company": "Boonthavorn",
+      "position": "Frontend Developer"
+    }
+  ]
+}
